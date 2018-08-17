@@ -4,7 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,8 @@
   "homepage": "https://github.com/emjo91/Starter-Pack#readme",
   "devDependencies": {
     "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0"
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
     "css-loader": "^1.0.0",

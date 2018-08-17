@@ -7,6 +7,9 @@ module.exports = function(env) {
 			path: __dirname + "/dist",
 			filename: "bundle.js"
 		},
+        devServer: {
+            contentBase: './dist'
+        },
         module: {
             rules: [
                 {test: /\.html$/, loader: 'raw-loader', exclude: /node_modules/},
