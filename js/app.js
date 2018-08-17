@@ -1,8 +1,8 @@
 //Require SASS
-require('../scss/main.scss');
+require('../assets/scss/main.scss');
 
 //Require CSS
-require('../style.css');
+require('../assets/css/style.css');
 
 // Require Scripts
 require('./script');
