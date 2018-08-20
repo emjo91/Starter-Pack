@@ -1,9 +1,6 @@
 //Require SASS
 require('../assets/scss/main.scss');
 
-//Require CSS
-require('../assets/css/style.css');
-
 // Require Scripts
 require('./script');
 
