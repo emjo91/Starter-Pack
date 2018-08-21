@@ -1,11 +1,6 @@
-//Require SASS
-require('../assets/scss/main.scss');
+import nav from "./nav";
+import {top, bottom} from "./footer";
+import makeButton from "./button";
+import { makeColorStyle } from "./button-styles";
 
-// Require Scripts
-require('./script');
-
-//Require Slick
-require('script-loader!../node_modules/slick-carousel/slick/slick');
-
-//Bootstrap
-import 'bootstrap';
+console.log(nav(), top, bottom, makeButton("My first button!"), makeColorStyle("cyan"));
