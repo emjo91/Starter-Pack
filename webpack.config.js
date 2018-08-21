@@ -1,4 +1,5 @@
-var webpack = require('webpack');
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = ({ mode }) => {
     console.log(mode);
@@ -8,6 +9,10 @@ module.exports = ({ mode }) => {
         output: {
             path: __dirname + "/dist",
             filename: "bundle.js"
-        }
+        },
+        plugins: [
+            new HtmlWebpackPlugin(),
+            new webpack.ProgressPlugin()
+        ]
     };
 };
