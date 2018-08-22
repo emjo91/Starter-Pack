@@ -1,9 +1,12 @@
+
+
 import nav from "./nav";
-import {top, bottom} from "./footer";
+import {footer} from "./footer";
 import makeButton from "./button";
 import { makeColorStyle } from "./button-styles";
 
 const button = makeButton("Yay! A button.");
-button.style = makeColorStyle("cyan");
+button.style = makeColorStyle("#bada55");
 
 document.body.appendChild(button);
+document.body.appendChild(footer);

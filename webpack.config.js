@@ -1,18 +1,23 @@
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpackMerge = require("webpack-merge");
 
-module.exports = ({ mode }) => {
-    console.log(mode);
-    return {
-        mode,
-        entry: "./js/app.js",
-        output: {
-            path: __dirname + "/dist",
-            filename: "bundle.js"
+const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
+
+module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
+    return webpackMerge (
+        {
+            mode,
+            entry: "./js/app.js",
+            output: {
+                path: __dirname + "/dist",
+                filename: "bundle.js"
+            },
+            plugins: [
+                new HtmlWebpackPlugin(),
+                new webpack.ProgressPlugin()
+            ]
         },
-        plugins: [
-            new HtmlWebpackPlugin(),
-            new webpack.ProgressPlugin()
-        ]
-    };
+        modeConfig(mode)
+    );
 };
