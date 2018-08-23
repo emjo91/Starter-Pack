@@ -11,7 +11,7 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
             entry: "./js/app.js",
             output: {
                 path: __dirname + "/dist",
-                filename: "bundle.js"
+                filename: "bundle.js" 
             },
             plugins: [
                 new HtmlWebpackPlugin(),
