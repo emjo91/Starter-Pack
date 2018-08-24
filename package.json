@@ -11,6 +11,9 @@
     "debug": "npm run webpack -- --inspect --debug-brk",
     "dev": "npm run webpack-dev-server -- --env.mode development --hot",
     "prod": "npm run webpack -- --env.mode production",
+    "prod:typescript": "npm run prod -- --env.presets typescript",
+    "prod:analyze": "npm run prod -- --env.presets analyze",
+    "prod:compress": "npm run prod -- --env.presets compress",
     "dev:debug": "npm run debug -- --env.mode development",
     "prod:debug": "npm run debug -- --env.mode production"
   },
@@ -28,17 +31,21 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "compression-webpack-plugin": "^1.1.11",
     "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "merge-webpack-plugin": "^0.2.1",
     "mini-css-extract-plugin": "^0.4.2",
     "postcss-loader": "^3.0.0",
+    "url-loader": "^1.1.1",
     "webpack": "^4.16.5",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "file-loader": "^1.1.11",
     "jquery": "^3.3.1",
     "node-sass": "^4.9.3",
     "popper.js": "^1.14.4",
@@ -47,6 +54,7 @@
     "script-loader": "^0.7.2",
     "slick-carousel": "^1.8.1",
     "style-loader": "^0.22.1",
-    "url-loader": "^1.1.1"
+    "ts-loader": "^4.5.0",
+    "typescript": "^3.1.0-dev.20180824"
   }
 }
