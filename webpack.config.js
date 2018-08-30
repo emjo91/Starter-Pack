@@ -27,7 +27,7 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
                     }
                 ]
             },
-            entry: "./js/app.js",
+            entry: "./src/index.js",
             output: {
                 path: __dirname + "/dist",
                 filename: "bundle.js",
